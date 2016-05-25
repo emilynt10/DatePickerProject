@@ -5,19 +5,18 @@ JAVA STUFF:
 This is from the superclasss which would be the MainActivity, I have renamed it DatePicker
 //
 
-package com.example.emilytsaturian.datepickerfragment;
+    package com.example.emilytsaturian.datepickerfragment;
 
-import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.support.v4.app.DialogFragment;
-
-public class DatePicker extends AppCompatActivity {
+    import android.os.Bundle;
+    import android.support.design.widget.FloatingActionButton;
+    import android.support.design.widget.Snackbar;
+    import android.support.v7.app.AppCompatActivity;
+    import android.support.v7.widget.Toolbar;
+    import android.view.View;
+    import android.view.Menu;
+    import android.view.MenuItem;
+    import android.support.v4.app.DialogFragment;
+    public class DatePicker extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,18 +60,15 @@ public class DatePicker extends AppCompatActivity {
         DialogFragment newFragment = new DatePickerFragment();
         newFragment.show(getSupportFragmentManager(), "datePicker");
     }
-}
+    }
 
 //
 This is from the subclass, which I have named DatePickerFragment
 //
 
-package com.example.emilytsaturian.datepickerfragment;
+    package com.example.emilytsaturian.datepickerfragment;
 
-/**
- * Created by emilytsaturian on 5/24/16.
- */
-        import android.app.DatePickerDialog;
+    import android.app.DatePickerDialog;
         import android.app.Dialog;
         import android.os.Bundle;
         import android.support.v4.app.DialogFragment;
@@ -80,7 +76,7 @@ package com.example.emilytsaturian.datepickerfragment;
         import android.widget.TextView;
         import java.util.Calendar;
 
-public class DatePickerFragment extends DialogFragment
+    public class DatePickerFragment extends DialogFragment
         implements DatePickerDialog.OnDateSetListener {
 
     @Override
@@ -101,14 +97,14 @@ public class DatePickerFragment extends DialogFragment
         tv1.setText("Year: "+view.getYear()+" Month: "+view.getMonth()+" Day: "+view.getDayOfMonth());
 
     }
-}
+    }
 
 XML STUFF:
 //
 This is the content_date_picker.xml
 //
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -132,16 +128,16 @@ This is the content_date_picker.xml
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-</RelativeLayout>
+    </RelativeLayout>
 
 //
 This is AndroidManifest.xml
 //
 
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    <?xml version="1.0" encoding="utf-8"?>
+    <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.emilytsaturian.datepickerfragment" >
-<application
+    <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -157,15 +153,15 @@ This is AndroidManifest.xml
         </activity>
     </application>
 
-</manifest>
+    </manifest>
 
 //
 Last but definitely not least this is strings.xml
 //
 
-<resources>
+    <resources>
     <string name="app_name">DatePicker</string>
     <string name="action_settings">Settings</string>
     <string name="pick_date">Pick Date</string>
     <string name="init_text">SetDatePicker</string>
-</resources>
+    </resources>
